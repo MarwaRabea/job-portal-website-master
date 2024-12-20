@@ -7,6 +7,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import CartPage from "./pages/purchase-flow/cartpage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 import store from "./redux/store";
@@ -95,6 +96,7 @@ const App = () => {
                   <Route path="/signup" element={<SignUp />} />
                   <Route path="/search" element={<SearchResultsPage />} />
                   <Route path="/courses" element={<CoursesPage />} />
+                  <Route path= "/cart" element={<CartPage />} />
                   <Route
                     path="/profile"
                     element={isLoggedIn ? <UserProfile /> : <SignIn />}
